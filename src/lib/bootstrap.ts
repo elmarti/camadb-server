@@ -7,9 +7,8 @@ export function bootstrap(config: ICamaServerConfig) {
     const CamaDbServerContainer = new Container();
 
     CamaDbServerContainer.bind<IServer>(TYPES.Server).toFactory<IServer,[true]>((context: any) => {
-        return (n) => {
-            return context.container.getTagged<IServer>(1234, '');
-            
+        return (name) => {
+            return context.container.get(TYPES.Server);
         };
     });
 }
