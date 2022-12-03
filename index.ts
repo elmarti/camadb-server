@@ -6,11 +6,13 @@ import { CamaDbServerContainer } from "./src/lib/bootstrap";
 import { TYPES } from "./types";
 
 const container = new Container();
+
 //@ts-ignore
 yargs(process.argv)
   .command('serve', 'start the server', (yargs) => {
   }, (argv) => {
-    // http factory    
+    // http factory 
+       
   })
   .options('p', {
     alias : 'port',
